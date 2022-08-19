@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/802fdeb78f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <section class="flex my-28 w-3/4 bg-slate-200 mx-auto rounded-md p-20 justify-around text-white shadow-md">
+        <div class="bg-rose-600 p-7 rounded-md">
+            <h2 class="font-medium py-3 text-2xl text-center">Discount Calculator</h2>
+            <p id="discount" class="text-lg font-semibold">Discounted Price : <span id="discount-price" class="font-bold"></span></p>
+            <p class="font-semibold text-lg relative copied-text mt-2">Coupon Code : <span id="coupon-code" > HELLO JS</span><i class="pl-3 fa-solid fa-clone cursor-pointer" id="copy-btn" onclick="clickToCopy()"  title="Click here to copy"></i></p>
+            <input type="number" id="price" class="mt-2 p-2 w-full text-slate-700 outline-0 font-semibold rounded-sm block" placeholder="Enter Price Here" value="">
+            <input type="number" id="discount-percentage" class="mt-2 p-2 w-full text-slate-700 outline-0 font-semibold rounded-sm block" placeholder="Enter Discount Percentage">
+            <input type="text" id="discount-code" class=" w-full block mt-2 p-2 text-slate-700 outline-0 font-semibold rounded-sm" placeholder="Enter Discount Code Here" value="">
+            <button id="discount-btn"  onclick="discountCalculator()" class="block mt-2 w-full py-2 px-5 rounded-sm font-bold bg-purple-700 hover:bg-orange-600 hover:text-white">Get Discount</button>
+
+        </div>
+        <div class="bg-purple-700 p-7 rounded-md">
+            <h2 class="font-medium py-3 text-2xl text-center">Calculator</h2>
+            <input type="text" id="display" class="text-right py-4 px-7 font-medium my-4 rounded-md w-full outline-none text-slate-700">
+            <div class="grid grid-cols-4 gap-4 text-center">
+                <div class="bg-rose-500 py-3 px-5  rounded-sm text-white text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">CE</div>
+                <div class="bg-rose-500 py-3 px-5  rounded-sm text-white text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">C</div>
+                <div class="bg-rose-500 py-3 px-5  rounded-sm text-white text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">%</div>
+                <div class="bg-rose-500 py-3 px-5  rounded-sm text-white text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">*</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">7</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">8</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">9</div>
+                <div class="bg-rose-500 py-3 px-5  rounded-sm text-white text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">/</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">4</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">5</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">6</div>
+                <div class="bg-rose-500 py-3 px-5  rounded-sm text-white text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">+</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">1</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">2</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">3</div>
+                <div class="bg-rose-500 py-3 px-5  rounded-sm text-white text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">-</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value">0</div>
+                <div class="bg-slate-50 py-3 px-5  rounded-sm text-slate-700 text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value col-span-2 "> =</div>
+                <div class="bg-rose-500 py-3 px-5  rounded-sm text-white text-lg font-medium hover:bg-gray-100 hover:text-black cursor-pointer calc-value ">.</div>
+              </div>
+        </div>
+    </section>
+    <script src="./discount.js"></script>
+    <script src="./calculator.js"></script>
+</body>
+</html>
